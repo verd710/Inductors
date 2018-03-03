@@ -18,6 +18,7 @@ Global
 		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Debug|x86.ActiveCfg = Debug
 		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Debug|x86.Build.0 = Debug
 		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Release|x86.ActiveCfg = Release
+		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
