@@ -119,9 +119,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="README.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="ЛЭЛО.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -134,6 +131,7 @@
     <EmbeddedResource Include="N.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="README.txt" />
     <Content Include="Resources\icon.ico" />
     <EmbeddedResource Include="WIRETYPES.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
