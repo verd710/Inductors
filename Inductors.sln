@@ -16,6 +16,7 @@ Global
 		{B1AD78C6-5040-4412-9D86-301BC2146719}.Release|x86.ActiveCfg = Release|x86
 		{B1AD78C6-5040-4412-9D86-301BC2146719}.Release|x86.Build.0 = Release|x86
 		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Debug|x86.ActiveCfg = Debug
+		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Debug|x86.Build.0 = Debug
 		{DD11A03D-3224-45BE-A96A-B66762AB8A42}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
