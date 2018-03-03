@@ -131,7 +131,9 @@
     <EmbeddedResource Include="N.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Content Include="README.txt" />
+    <EmbeddedResource Include="README.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Resources\icon.ico" />
     <EmbeddedResource Include="WIRETYPES.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
