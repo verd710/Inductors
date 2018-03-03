@@ -34,15 +34,12 @@ namespace Inductors
             {   // Open the text file using a stream writer.
                 using (StreamWriter sw = new StreamWriter(fileName, false, Encoding.Default))
                 {
-                 
                     sw.Write(text);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Could not write to file: " + ex.Message);
-      
-
             }
         }
 
@@ -51,7 +48,6 @@ namespace Inductors
             listBox_wireTypes.Items.Clear();
             foreach (String wire in wireTypes)
                 listBox_wireTypes.Items.Add(wire);
-
         }
 
         private void listBox_wireTypes_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,7 +58,7 @@ namespace Inductors
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -72,26 +68,24 @@ namespace Inductors
             {
                 String deleteType = textBox_delete.Text;
 
-                if(deleteType == "ПЭЛШО" || deleteType == "ПЭШО" || deleteType == "ЛЭШО" || deleteType == "ЛЭЛО" || deleteType == "ПЭЛО")
+                if (deleteType == "ПЭЛШО" || deleteType == "ПЭШО" || deleteType == "ЛЭШО" || deleteType == "ЛЭЛО" || deleteType == "ПЭЛО")
                     throw new Exception("Невозможно удалить встроенный тип");
-                
+
                 wireTypes.Remove(deleteType);
                 WriteWireTypes();
 
                 UpdateListbox();
                 textBox_delete.Text = "";
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void add_button_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 String newType = textBox_add.Text;
                 if (newType.Length == 0)
@@ -99,7 +93,6 @@ namespace Inductors
 
                 if (newType.Contains(' ') || newType.Contains('*') || newType.Contains('|') || newType.Contains('\\') || newType.Contains(':') || newType.Contains('"') || newType.Contains('<') || newType.Contains('>') || newType.Contains('?') || newType.Contains('/'))
                     throw new Exception("Название провода не должно содержать пробелы или следующие символы: * | \\ : \" < > ? /");
-
 
                 wireTypes.Add(newType);
                 WriteWireTypes();
@@ -111,8 +104,6 @@ namespace Inductors
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
-
     }
 }

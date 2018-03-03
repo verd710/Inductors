@@ -25,11 +25,8 @@ namespace Inductors
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Невозможно открыть ссылку");
+                MessageBox.Show("Невозможно открыть ссылку: " + ex.Message);
             }
         }
-
-
- 
     }
 }

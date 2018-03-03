@@ -119,17 +119,30 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="README.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ЛЭЛО.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ЛЭШО.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПЭШО.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="N.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Resources\icon.ico" />
-    <Content Include="Resources\WIRETYPES.txt" />
-    <Content Include="Resources\ЛЭЛО.txt" />
-    <Content Include="Resources\ЛЭШО.txt" />
-    <Content Include="Resources\ПЭЛШО.txt" />
-    <Content Include="Resources\ПЭШО.txt" />
+    <EmbeddedResource Include="WIRETYPES.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПЭЛШО.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Resources\InductorAbout.png" />
     <Content Include="Resources\banner.jpg" />
-    <Content Include="Resources\Inductor.bmp" />
-    <Content Include="Resources\N.txt" />
-    <Content Include="Resources\README.txt" />
     <Content Include="Resources\section.tif" />
   </ItemGroup>
   <ItemGroup>

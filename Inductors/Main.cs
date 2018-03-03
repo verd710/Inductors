@@ -44,7 +44,6 @@ namespace Inductors
             radioButton_same.Checked = same;
 
             UpdateWireTypes();
-            
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,7 +60,6 @@ namespace Inductors
                 N = Convert.ToDouble(NSecondLineOfFile[i - 1]) - ((Convert.ToDouble(NSecondLineOfFile[i - 1]) - Convert.ToDouble(NSecondLineOfFile[i])) * (r2r1 - Convert.ToDouble(NFirstLineOfFile[i - 1])) / (Convert.ToDouble(NFirstLineOfFile[i]) - Convert.ToDouble(NFirstLineOfFile[i - 1])));
 
             return N * Math.Sqrt((A / 10) * (a / 10));         //с переводом в сантиметры
-
         }
 
         double InductionBetween(double a, double D2, int step)
@@ -124,9 +122,8 @@ namespace Inductors
             }
 
             return M;
-
         }
-        
+
         bool Solve()
         {
             //чтение значений N из таблицы один раз во время исполнения программы
@@ -136,7 +133,6 @@ namespace Inductors
 
             if (same)
             {
-
                 //размеры намотки
                 double C = coilNum[0] * Math.Pow((kn * maxWireDiameter), 2) / sectionWidth;
                 double D2 = diameter + 2 * C;
@@ -157,18 +153,14 @@ namespace Inductors
                     double M = InductionBetweenSections(a, D2, i, coilNum[0], 0);
                     L += 2 * M * (sectionNum - i);
                 }
-
-
             }
 
             else
             {
-
                 L = 0;
 
                 for (int i = 0; i < sectionNum; i++)
                 {
-
                     //размеры намотки
                     double C = coilNum[i] * Math.Pow((kn * maxWireDiameter), 2) / sectionWidth;
                     double D2 = diameter + 2 * C;
@@ -183,17 +175,11 @@ namespace Inductors
                     for (int j = i + 1; j < sectionNum; j++)
                     {
                         //взаимоиндукция между секциями
-
                         double M = InductionBetweenSections(a, D2, j - i, coilNum[i], coilNum[j]);
                         L += 2 * M;
-
                     }
-
                 }
-
-
             }
-
 
             return true;
         }
@@ -223,8 +209,6 @@ namespace Inductors
             if (SecondLineOfFile != null)
                 Array.Clear(SecondLineOfFile, 0, SecondLineOfFile.Length);
 
-
-
             //resetting the window
 
             textBox_section_num.Text = "";
@@ -251,8 +235,7 @@ namespace Inductors
                 {
                     // Read the stream to a string
                     text = sr.ReadToEnd();
-
-                    String[] Lines = text.Split(new char[]{'\n'}, System.StringSplitOptions.RemoveEmptyEntries);
+                    String[] Lines = text.Split(new char[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
                     int i = 0;
 
@@ -274,21 +257,16 @@ namespace Inductors
                         String[] splitLine = Lines[i].Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                         line1[j] = splitLine[0];
                         line2[j] = splitLine[1];
-
                     }
 
                     return true;
-
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("The file could not be read: " + ex.Message);
                 return false;
-
             }
-
-
         }
 
         public static List<String> ReadWireTypes()
@@ -302,13 +280,10 @@ namespace Inductors
                 {
                     // Read the stream to a string
                     text = sr.ReadToEnd();
-
-                    String[] Lines = text.Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries); 
-
+                    String[] Lines = text.Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     list = new List<String>(Lines);
 
                     return list;
-
                 }
             }
             catch (Exception ex)
@@ -316,16 +291,14 @@ namespace Inductors
                 MessageBox.Show("The file could not be read: " + ex.Message);
                 list = new List<String>();
                 return list;
-
             }
-            
         }
 
         void UpdateWireTypes()
         {
-            if(wireTypesAvailable != null)
+            if (wireTypesAvailable != null)
                 wireTypesAvailable.Clear();
-            
+
             wireTypesAvailable = ReadWireTypes();
 
             comboBox_wire_type.Items.Clear();
@@ -338,17 +311,14 @@ namespace Inductors
         //a method that parses a special format of wire diameter like: 0,1x14
         double ParseWireDiameter(string text)
         {
-
             int index = text.IndexOf('x');
             return Convert.ToDouble(text.Substring(0, index)) * Convert.ToDouble(text.Substring(index + 1, text.Length - 1 - index));
-
         }
 
         void UpdateGridView()
         {
             dataGridView_num.Rows.Clear();
             dataGridView_num.Columns.Clear();
-
 
             dataGridView_num.Columns.Add("columnName", "");
 
@@ -371,8 +341,6 @@ namespace Inductors
             {
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
             }
-
-
         }
 
         //reads data from the window and checks for input errors
@@ -406,7 +374,6 @@ namespace Inductors
                     {
                         if (!int.TryParse(Convert.ToString(cell.Value), out coilNum[cell.RowIndex]) || coilNum[cell.RowIndex] <= 0)
                         {
-
                             if (!coilNumError)
                                 errorText += "\nЧисло витков в секциях";
                             error = true;
@@ -452,8 +419,6 @@ namespace Inductors
                 errorText += "\nДиаметр провода по меди";
             }
             return error;
-
-
         }
 
         int MaxCoilNum()
@@ -463,7 +428,7 @@ namespace Inductors
             {
                 foreach (int coil in coilNum)
                     if (coil > max)
-                        max = coil; 
+                        max = coil;
             }
 
             return max;
@@ -520,20 +485,15 @@ namespace Inductors
             }
             else
                 textBox_between_sections.Enabled = true;
-
-
-
         }
 
         private void radioButton_different_CheckedChanged(object sender, EventArgs e)
         {
             UpdateGridView();
-
         }
 
         private void comboBox_wire_type_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
             //reset wire diameter window
             comboBox_wire_diameter.SelectedIndex = -1;
             comboBox_wire_diameter.Items.Clear();
@@ -542,18 +502,14 @@ namespace Inductors
 
             wireType = comboBox_wire_type.Text;
 
-
             //read wire diameter from file 
 
-
             string fileName = wireType + ".txt";
-
 
             if (ReadFromFile(fileName, ref FirstLineOfFile, ref SecondLineOfFile, true))
                 //fill the combobox
                 for (int i = 0; i < FirstLineOfFile.Length; i++)
                     comboBox_wire_diameter.Items.Add(FirstLineOfFile[i]);
-
 
             wireDiameter = 0;
             maxWireDiameter = 0;
@@ -561,7 +517,6 @@ namespace Inductors
 
         private void comboBox_wire_diameter_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
             string wireDiameterText = comboBox_wire_diameter.Text;
             maxWireDiameter = 0;
 
@@ -574,15 +529,11 @@ namespace Inductors
             for (int i = 0; i < FirstLineOfFile.Length && maxWireDiameter == 0; i++)
                 if (wireDiameterText == FirstLineOfFile[i])
                     maxWireDiameter = Convert.ToDouble(SecondLineOfFile[i]);
-
-
-
         }
 
         private void button_reset_Click(object sender, EventArgs e)
         {
             Reset();
-
         }
 
         private void button_example_Click(object sender, EventArgs e)
@@ -597,9 +548,7 @@ namespace Inductors
             coilNum = new int[1];
             coilNum[0] = 100;
             wireType = "ПЭЛШО";
-
             diameter = 8.5;
-
 
             //setting the window
 
@@ -621,7 +570,6 @@ namespace Inductors
                 wireDiameter = 0.25;
                 maxWireDiameter = 0.35;
             }
-
         }
 
         private void button_calculate_Click(object sender, EventArgs e)
@@ -638,8 +586,6 @@ namespace Inductors
                 label_result.Text = Convert.ToString(Math.Round(L, 3)) + " мкГ";
                 PaintInd();
             }
-
-
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -655,8 +601,14 @@ namespace Inductors
 
         private void ReadmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("README.txt");
-
+            try
+            {
+                System.Diagnostics.Process.Start("README.txt");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Невозможно открыть файл: " + ex.Message);
+            }
         }
 
         private void WireTypesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -677,23 +629,27 @@ namespace Inductors
                 wireDiameter = 0;
                 maxWireDiameter = 0;
             }
-                
         }
-        
+
         private void MethodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.cqf.su/technics/technics51-Universal.php");
-        }  
+            try
+            {
+                System.Diagnostics.Process.Start("http://www.cqf.su/technics/technics51-Universal.php");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Невозможно открыть ссылку: " + ex.Message);
+            }
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-      
+
         void PaintInd()
         {
-            Bitmap myBitmap = new Bitmap("section.tif");
+            Bitmap myBitmap = new Bitmap(Properties.Resources.section);
             Graphics g = panelDraw.CreateGraphics();
             g.Clear(panelDraw.BackColor);
-
-            
 
             //размеры области рисования
             float outerSizeX = panelDraw.Width;
@@ -716,21 +672,20 @@ namespace Inductors
             float ySize = Convert.ToSingle(scale * MaxSectionDiameter());
 
             //цикл для масштабирования рисунка
-             while ((xSize <= innerSizeX && ySize <= innerSizeY) || xSize > outerSizeX || ySize > outerSizeY ) 
+            while ((xSize <= innerSizeX && ySize <= innerSizeY) || xSize > outerSizeX || ySize > outerSizeY)
             {
                 if (xSize <= innerSizeX && ySize <= innerSizeY)
                     scale *= 1.001F;
-            
+
                 else if (xSize > outerSizeX || ySize > outerSizeY)
                     scale /= 1.001F;
-                
+
                 betweenSectionsScaled = Convert.ToSingle(scale * betweenSections);
                 sectionWidthScaled = Convert.ToSingle(scale * sectionWidth);
                 diameterScaled = Convert.ToSingle(scale * diameter);
 
                 xSize = (sectionNum * (betweenSectionsScaled + sectionWidthScaled) - betweenSectionsScaled + indent * 2);
                 ySize = Convert.ToSingle(scale * MaxSectionDiameter());
- 
             }
 
             double C = coilNum[0] * Math.Pow((kn * maxWireDiameter), 2) / sectionWidth;
@@ -743,7 +698,6 @@ namespace Inductors
 
             //отрисовка начала каркаса
 
-            
             PointF topLineStart1 = new PointF { X = xCenter - (sectionNum * (betweenSectionsScaled + sectionWidthScaled) - betweenSectionsScaled) / 2 - indent, Y = yCenter - diameterScaled / 2 };
             PointF topLineStart2 = new PointF { X = topLineStart1.X + indent, Y = yCenter - diameterScaled / 2 };
 
@@ -753,7 +707,7 @@ namespace Inductors
             SolidBrush brush = new SolidBrush(Color.Black);
             Pen pen = new Pen(brush, 4);
 
-            g.DrawLines(pen, new PointF[] {topLineStart2, topLineStart1, bottomLineStart1, bottomLineStart2 });
+            g.DrawLines(pen, new PointF[] { topLineStart2, topLineStart1, bottomLineStart1, bottomLineStart2 });
 
 
             PointF top1 = new PointF(), top2 = new PointF(), bottom1 = new PointF(), bottom2 = new PointF();
@@ -771,7 +725,7 @@ namespace Inductors
                     D2Scaled = Convert.ToSingle(scale * (diameter + 2 * C));
                 }
 
-                rect = new RectangleF((topLineStart2.X + i * sectionWidthScaled + i * betweenSectionsScaled), yCenter - D2Scaled/2, sectionWidthScaled, D2Scaled);
+                rect = new RectangleF((topLineStart2.X + i * sectionWidthScaled + i * betweenSectionsScaled), yCenter - D2Scaled / 2, sectionWidthScaled, D2Scaled);
                 g.DrawImage(myBitmap, rect);
 
 
@@ -796,8 +750,6 @@ namespace Inductors
                     g.DrawLine(pen, bottom1, bottom2);
                 }
             }
-
-  
         }
 
         void panelDraw_Paint(object sender, PaintEventArgs e)
@@ -808,10 +760,8 @@ namespace Inductors
 
         void panelDraw_Resize(object sender, EventArgs e)
         {
-            if (L != 0 && panelDraw.Height !=0 && panelDraw.Width != 0)
+            if (L != 0 && panelDraw.Height != 0 && panelDraw.Width != 0)
                 PaintInd();
         }
-    
-
     }
 }
