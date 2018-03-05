@@ -21,7 +21,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_18A4848339F54DD38BCEB41E63C74604"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_23AD11E8F5C2465B861A6B58E1E49115"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_32F3D716F1C542499BBB2731A4DEB74B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_392E6690390D4C139378B8CF7754C45E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -39,7 +57,25 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9D4EBD9CFEE74899B1B39C9A50A20C44"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A95B09B7E9E249D899AFC547FD54D7F9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BFCA5E7D84694771ABF57C1018A321C4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CF49DB7967E64F0CBAC8AB57432637B3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -180,6 +216,66 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_18A4848339F54DD38BCEB41E63C74604"
+            {
+            "SourcePath" = "8:..\\Inductors\\ЛЭЛО.txt"
+            "TargetName" = "8:ЛЭЛО.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32F3D716F1C542499BBB2731A4DEB74B"
+            {
+            "SourcePath" = "8:..\\Inductors\\N.txt"
+            "TargetName" = "8:N.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_392E6690390D4C139378B8CF7754C45E"
+            {
+            "SourcePath" = "8:..\\Inductors\\WIRETYPES.txt"
+            "TargetName" = "8:WIRETYPES.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_517794D3543C405280433241D6D6AD55"
             {
             "SourcePath" = "8:..\\Inductors\\Resources\\InductorAbout.png"
@@ -220,6 +316,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D4EBD9CFEE74899B1B39C9A50A20C44"
+            {
+            "SourcePath" = "8:..\\Inductors\\ПЭШО.txt"
+            "TargetName" = "8:ПЭШО.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A95B09B7E9E249D899AFC547FD54D7F9"
+            {
+            "SourcePath" = "8:..\\Inductors\\ЛЭШО.txt"
+            "TargetName" = "8:ЛЭШО.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BFCA5E7D84694771ABF57C1018A321C4"
             {
             "SourcePath" = "8:..\\Inductors\\README.txt"
@@ -230,6 +366,26 @@
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
             "ReadOnly" = "11:TRUE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CF49DB7967E64F0CBAC8AB57432637B3"
+            {
+            "SourcePath" = "8:..\\Inductors\\ПЭЛШО.txt"
+            "TargetName" = "8:ПЭЛШО.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_0DD396C14C6749268929E03D85242DA2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
             "Permanent" = "11:FALSE"
@@ -317,7 +473,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Inductors"
         "ProductCode" = "8:{40205786-EB0A-4767-964D-5288B3E266AF}"
-        "PackageCode" = "8:{12B2483F-FB24-46A3-92B0-9C074FEDC3D7}"
+        "PackageCode" = "8:{14599E93-4466-4C1F-8417-E7AF98DDA660}"
         "UpgradeCode" = "8:{63C13109-E9FD-4E9F-A6A8-0CEED7BB541D}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
