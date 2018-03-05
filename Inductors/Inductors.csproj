@@ -119,28 +119,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ЛЭЛО.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ЛЭШО.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ПЭШО.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="N.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="README.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Resources\icon.ico" />
-    <EmbeddedResource Include="WIRETYPES.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ПЭЛШО.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
     <None Include="Resources\InductorAbout.png" />
     <Content Include="Resources\banner.jpg" />
     <Content Include="Resources\section.tif" />
